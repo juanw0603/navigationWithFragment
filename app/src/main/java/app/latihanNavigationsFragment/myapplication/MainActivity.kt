@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             mFragmentManager.findFragmentByTag(halaman1::class.java.simpleName)
             mFragmentManager
                 .beginTransaction()
-                .replace(R.id.FragmentPlace, Fhalaman1,halaman1::class.java.simpleName)
+                .replace(R.id.FragmentPlace, Fhalaman1, halaman1::class.java.simpleName)
                 .commit()
         }
 
@@ -38,10 +38,16 @@ class MainActivity : AppCompatActivity() {
             mFragmentManager.findFragmentByTag(halaman2::class.java.simpleName)
             mFragmentManager
                 .beginTransaction()
-                .replace(R.id.FragmentPlace, Fhalaman2,halaman2::class.java.simpleName)
+                .replace(R.id.FragmentPlace, Fhalaman2, halaman2::class.java.simpleName)
                 .commit()
         }
-
+        _navToHalaman3.setOnClickListener {
+            mFragmentManager.findFragmentByTag(halaman3::class.java.simpleName)
+            mFragmentManager
+                .beginTransaction()
+                .replace(R.id.FragmentPlace, Fhalaman3, halaman3::class.java.simpleName)
+                .commit()
+        }
 
     }
 }
