@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="30dp"
         android:gravity="center"
-        android:paddingBottom="300dp"
+        android:paddingBottom="350dp"
         android:text="FRAGMENT 3"
         android:textSize="30dp" />
 
