@@ -1,6 +1,7 @@
 package app.latihanNavigationsFragment.myapplication
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val mFragmentManager = supportFragmentManager
+        val Fhalaman1 = halaman1()
+
+
+        val _navToHalaman1 = findViewById<Button>(R.id.halaman1)
+
+        _navToHalaman1.setOnClickListener {
+            mFragmentManager.findFragmentByTag(halaman1::class.java.simpleName)
+            mFragmentManager
+                .beginTransaction()
+                .add(R.id.FragmentPlace, Fhalaman1,halaman1::class.java.simpleName)
+                .commit()
+        }
+
     }
 }
