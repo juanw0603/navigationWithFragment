@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             mFragmentManager.findFragmentByTag(halaman1::class.java.simpleName)
             mFragmentManager
                 .beginTransaction()
-                .add(R.id.FragmentPlace, Fhalaman1,halaman1::class.java.simpleName)
+                .replace(R.id.FragmentPlace, Fhalaman1,halaman1::class.java.simpleName)
                 .commit()
         }
 
